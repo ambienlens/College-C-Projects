@@ -5,7 +5,7 @@ This repository contains all the C files I learnt and made during the first and 
 
 ### **READING THE FILES**:
 
-The files are arranged in Assignment order, and each assignment contains one folder each. Now you can visit each assingment and read the questions.txt there and then you can find the program corresponding to it's question number
+The files are arranged in Assignment order, and each assignment contains one folder each. Now you can visit each assingment and read the **questions.txt** there and then you can find the program corresponding to it's **question number**
 
 <p>&nbsp;</p>
 
