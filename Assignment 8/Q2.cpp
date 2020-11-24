@@ -1,5 +1,5 @@
 //Debayan Majumder
-//Write a program to sort a list of elements using bubble sort algorithm and also implement modified bubble sort.
+//Write a program to sort a list of elements using selection sort algorithm.
 
 #include <stdio.h>
 #define MAX 10
@@ -17,24 +17,30 @@ void displayArray(int array[], int n)
         printf("%d\n", array[i]);
 }
 
-void bubbleSort(int array[], int n)
+void selectionSort(int a[], int n)
 {
-    int temp;
-    for(int i=0; i<n-1; i++)
+    int i,j,l, pivot, t;
+    for(i=0;i<n-1;i++)
     {
-        for(int j=0; j<n-i-1; j++)
+        pivot = a[i];
+        l=i;
+        for(j=i+1;j<n;j++)
         {
-            if(array[j] > array[j+1])
+            if(a[j]<pivot)
             {
-                temp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = temp;
+                pivot = a[j];
+                l=j;
             }
-        }
+       }
+       if(i!=l)
+       {
+           t = a[i];
+           a[i] = a[l];
+           a[l] = t;
+       }
     }
-    printf("Array after bubble sorting: \n");
-    displayArray(array, n);
 }
+
 
 int main()
 {
@@ -44,6 +50,8 @@ int main()
     inputArray(array, n);
     printf("Original Array: \n");
     displayArray(array, n);
-    bubbleSort(array, n);
+    selectionSort(array, n);
+    printf("Array after Selection Sorting: \n");
+    displayArray(array, n);
     return 0;
 }
