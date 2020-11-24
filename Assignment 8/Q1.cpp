@@ -61,13 +61,27 @@ void modifiedBubbleSort(int array[], int n)
 
 int main()
 {
-    int array[MAX], n;
+    int array[MAX], n, choice;
     printf("Enter the no. of elements: ");
     scanf("%d", &n);
     inputArray(array, n);
     printf("Original Array: \n");
     displayArray(array, n);
-    bubbleSort(array, n);
-    modifiedBubbleSort(array, n);
+
+    printf("Enter 1 for normal  Bubble Sort, and 2 for Modified Bubble Sort: \n");
+    scanf("%d", &choice);
+    switch (choice)
+    {
+        case 1:
+        bubbleSort(array, n);
+        break;
+
+        case 2:
+        modifiedBubbleSort(array, n);
+        break;
+
+        default:
+        printf("Wrong Input!\n");
+    }
     return 0;
 }
