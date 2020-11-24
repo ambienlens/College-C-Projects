@@ -17,7 +17,7 @@ void displayArray(int array[], int n)
         printf("%d\n", array[i]);
 }
 
-void bubblesort(int array[], int n)
+void bubbleSort(int array[], int n)
 {
     int temp;
     for(int i=0; i<n-1; i++)
@@ -44,6 +44,6 @@ int main()
     inputArray(array, n);
     printf("Original Array: \n");
     displayArray(array, n);
-    bubblesort(array, n);
+    bubbleSort(array, n);
     return 0;
 }
