@@ -38,7 +38,25 @@ void bubbleSort(int array[], int n)
 
 void modifiedBubbleSort(int array[], int n)
 {
-    
+    int temp, c;
+    for(int i=0; i<n-1; i++)
+    {
+        c = 1;
+        for(int j=0; j<n-i-1; j++)
+        {
+            if(array[j] > array[j+1])
+            {
+                temp = array[j];
+                array[j] = array[j+1];
+                array[j+1] = temp;
+                c = 0;
+            }
+        }
+        if(c == 1)
+            break;
+    }
+    printf("Array after modified bubble sorting: \n");
+    displayArray(array, n);
 }
 
 int main()
@@ -50,5 +68,6 @@ int main()
     printf("Original Array: \n");
     displayArray(array, n);
     bubbleSort(array, n);
+    modifiedBubbleSort(array, n);
     return 0;
 }
