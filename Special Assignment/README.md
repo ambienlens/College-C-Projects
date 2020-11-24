@@ -1,4 +1,4 @@
-balance.cpp ->
+## balance.cpp ->
 A bracket is considered to be any one of the following characters: (, ), {, }, [, or ]. Two brackets are
 considered to be a matched pair if the an opening bracket (i.e., (, [, or {) occurs to the left of a closing
 bracket (i.e., ), ], or }) of the exact same type. There are three types of matched pairs of brackets: [],
@@ -23,7 +23,7 @@ YES
 NO
 YES
 
-maxsum.cpp ->
+## maxsum.cpp ->
 You are given a stack of N integers such that the first element represents the top of the stack and the
 last element represents the bottom of the stack. You need to pop at least one element from the stack.
 At any one moment, you can convert stack into a queue. The bottom of the stack represents the front of
@@ -40,7 +40,7 @@ Then convert the stack into queue and remove first three elements from the queue
 The maximum possible sum is 10+9+8+7+6 = 40
 
 
-maxtop.cpp ->
+## maxtop.cpp ->
 You are given a stack of N integers. In one operation, you can either pop an element from the stack
 or push any popped element into the stack. You need to maximize the top element of the stack after
 performing exactly K operations. If the stack becomes empty after performing K operations and there is

@@ -36,6 +36,11 @@ void bubbleSort(int array[], int n)
     displayArray(array, n);
 }
 
+void modifiedBubbleSort(int array[], int n)
+{
+    
+}
+
 int main()
 {
     int array[MAX], n;
