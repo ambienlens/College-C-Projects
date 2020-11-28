@@ -1,3 +1,6 @@
+//DEBAYAN MAJUMDER
+//Write a program to sort a list of elements using Insertion sort algorithm.
+
 #include <stdio.h>
 #define MAX 10
 
