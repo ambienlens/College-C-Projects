@@ -20,25 +20,7 @@ void displayArray(int array[], int n)
 
 void quickSort(int array[], int n)
 {
-    int l, pivot, t;
-    for(int i=0; i<n-1; i++){
-        pivot = array[i];
-        l = i;
-        for(int j=i+1; j<n; j++)
-        {
-            if(array[j] < pivot)
-            {
-                pivot = array[j];
-                l=j;
-            }
-        }
-        if(i != l)
-        {
-            t = array[i];
-            array[i] = array[l];
-            array[l] = t;
-        }
-    }
+    
 }
 
 int main()
