@@ -32,7 +32,7 @@ void quickSort(int array[], int n)
                 l=j;
             }
         }
-        if(i! = l)
+        if(i != l)
         {
             t = array[i];
             array[i] = array[l];
