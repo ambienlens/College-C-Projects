@@ -1,5 +1,6 @@
-//DEBAYAN MAJUMDER
-//Write a program to sort a list of elements using Insertion sort algorithm.
+//Debayan Majumder
+//Write programs to sort a list of elements using Quick sort algorithm considering
+//First element as a pivot
 
 #include <stdio.h>
 #define MAX 10
@@ -17,19 +18,26 @@ void displayArray(int array[], int n)
         printf("%d\n", array[i]);
 }
 
-void insertionSort(int array[], int n)
+void quickSort(int array[], int n)
 {
-    int j, key;
-    for(int i=1; i<n; i++)
-    {
-        key = array[i];
-        j = i-1;
-        while(j>=0 && array[j]>key)
+    int l, pivot, t;
+    for(int i=0; i<n-1; i++){
+        pivot = array[i];
+        l = i;
+        for(int j=i+1; j<n; j++)
         {
-            array[j+1] = array[j];
-            j--;
-        } 
-        array[j+1] = key;
+            if(array[j] < pivot)
+            {
+                pivot = array[j];
+                l=j;
+            }
+        }
+        if(i! = l)
+        {
+            t = array[i];
+            array[i] = array[l];
+            array[l] = t;
+        }
     }
 }
 
@@ -41,7 +49,7 @@ int main()
     inputArray(array, n);
     printf("Original Array: \n");
     displayArray(array, n);
-    insertionSort(array, n);
+    quickSort(array, n);
     printf("Array after Insertion Sorting: \n");
     displayArray(array, n);
     return 0;
