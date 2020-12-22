@@ -42,7 +42,6 @@ void push(int data)
 void display()
 {
     top1 = top;
- 
     if (top1 == NULL)
     {
         printf("Stack is empty");
@@ -57,10 +56,9 @@ void display()
  }
  
 
-void pop()
+int pop()
 {
     top1 = top;
- 
     if (top1 == NULL)
     {
         printf("\nEmpty stack, cant take input");
@@ -68,10 +66,12 @@ void pop()
     }
     else
         top1 = top1->ptr;
-    printf("\nPopped value : %d", top->info);
+    
+    //printf("\nPopped value : %d", top->info);
     free(top);
     top = top1;
     count--;
+    return top->info;
 }
  
 
@@ -82,12 +82,12 @@ int topelement()
 
 void main()
 {
-    int no, ch, e;
+    int no, ch, e, hehe;
     create();
  
+    printf("***STACK OPERATIONS USING LINKED LIST***");
     while (1)
     {
-        printf("***STACK OPERATIONS USING LINKED LIST***");
         printf("\n1 - Push");
         printf("\n2 - Pop");
         printf("\n3 - Top");
@@ -106,7 +106,8 @@ void main()
             push(no);
             break;
         case 2:
-            pop();
+            hehe = pop();
+            printf("Kicked value: %d", hehe);
             break;
         case 3:
             if (top == NULL)
@@ -126,7 +127,7 @@ void main()
         case 6:
             exit(0);
         default :
-            printf(" Wrong choice, Please enter correct choice  ");
+            printf("Wrong Input, Enter correct option.");
             break;
         }
     }
