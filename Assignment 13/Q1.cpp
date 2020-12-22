@@ -1,4 +1,4 @@
-
+//Debayan Majumder
 //C Program to Implement a Stack using Linked List
 
 #include <stdio.h>
@@ -11,19 +11,16 @@ struct node
 }*top,*top1,*temp;
 int count = 0;
 
-/* Create empty stack */
 void create()
 {
     top = NULL;
 }
  
-/* Count stack elements */
 void stack_count()
 {
     printf("\nNo. of elements in stack : %d", count);
 }
  
-/* Push data into stack */
 void push(int data)
 {
     if (top == NULL)
@@ -41,8 +38,7 @@ void push(int data)
     }
     count++;
 }
- 
-/* Display stack elements */
+
 void display()
 {
     top1 = top;
@@ -60,14 +56,14 @@ void display()
     }
  }
  
-/* Pop Operation on stack */
+
 void pop()
 {
     top1 = top;
  
     if (top1 == NULL)
     {
-        printf("\nError : Trying to pop from empty stack");
+        printf("\nEmpty stack, cant take input");
         return;
     }
     else
@@ -78,7 +74,7 @@ void pop()
     count--;
 }
  
-/* Return top element */
+
 int topelement()
 {
     return(top->info);
@@ -91,6 +87,7 @@ void main()
  
     while (1)
     {
+        printf("***STACK OPERATIONS USING LINKED LIST***");
         printf("\n1 - Push");
         printf("\n2 - Pop");
         printf("\n3 - Top");
