@@ -1,4 +1,6 @@
-//Priyadarshan Ghosh
+//Debayan Majumder
+//Queue Implementation using LinkedList.
+
 #include <stdio.h>
 #include <stdlib.h>
  
