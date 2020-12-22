@@ -62,7 +62,7 @@ int pop()
     if (top1 == NULL)
     {
         printf("\nEmpty stack, cant take input");
-        return;
+        return 0;
     }
     else
         top1 = top1->ptr;
@@ -71,6 +71,7 @@ int pop()
     free(top);
     top = top1;
     count--;
+    
     return top->info;
 }
  
